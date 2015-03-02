@@ -44,7 +44,7 @@ function sort(fv::FeatureVector)
     words[i] = word
     i+=1
   end
-  return sort!(words,lt=gt)
+  return Base.sort!(words,lt=gt)
 end
 
 # gets value of [key] in a FeatureVector
