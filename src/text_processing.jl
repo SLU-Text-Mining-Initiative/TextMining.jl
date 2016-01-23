@@ -7,6 +7,12 @@ function clean(string)
   sarray = convert(Array{typeof(string)}, Base.split(string))
   x = 1 
 
+  for x in 1:length(sarray)
+    word = join(split(sarray[x], char(0x2223)))
+    sarray[x] = word
+  end
+  x=1
+
   while x <= length(sarray)
     sarray[x] = Base.strip(sarray[x], punctuation)
     x += 1
