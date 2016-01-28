@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/SLU-TMI/TextMining.jl.svg?branch=master)](https://travis-ci.org/SLU-TMI/TextMining.jl)
 
-This package is a set of tools being used by Saint Louis University to facilitate interdisciplinary research  of how time passage affects language using data mining, machine learning, and natural language processing techniques.
+This package is a set of tools used by Saint Louis University to facilitate interdisciplinary research  of how time passage affects language using data mining, machine learning, and natural language processing techniques.
 ---
 For further information, contact project leader Lauren Kersey at kersey@slu.edu.
 ---

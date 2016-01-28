@@ -6,11 +6,20 @@ function clean(string)
   string = Base.lowercase(string)
   sarray = convert(Array{typeof(string)}, Base.split(string))
   x = 1 
-
+  
+  for x in 1: length(sarray)
+  word = join(split(sarray[x], char(0x2223)))
+  sarray[x] = word
+  
   while x <= length(sarray)
     sarray[x] = Base.strip(sarray[x], punctuation)
     x += 1
   end
+  
+  for x in 1:length(sarray)
+    word = join(split(sarray[x], '∣'))
+    sarray[x] = word
+    end
 
   return sarray
 end
