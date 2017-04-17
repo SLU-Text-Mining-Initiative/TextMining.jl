@@ -197,7 +197,11 @@ ds = DataSet()
 Clustering
 ------
 
-#### k Means
+#### The simplest way to run kmeans clustering is to enter the data as a "cluster" type and predefine the number of categories.  
+```julia
+julia> results = kmeans(cluster.vectors, k)
+```
+
 
 #### Hierarchical
 
