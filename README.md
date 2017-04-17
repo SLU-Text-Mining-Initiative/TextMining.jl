@@ -40,7 +40,7 @@ Pkg.clone("https://github.com/SLU-TMI/TextMining.jl.git")
 Feature Space Model
 ------
 
-These tools will utilize the [bag-of-words model](http://en.wikipedia.org/wiki/Bag-of-words_model) and the [hashing trick](http://en.wikipedia.org/wiki/Feature_hashing) to vectorize texts into [feature vectors](http://en.wikipedia.org/wiki/Feature_vector). Feature vectors exist in an infinite dimensional vector space which is refered to as the **feature space**. In order to optimize calculations, dimensions where the feature vector has value 0 are removed from the feature vector's hashtable. We are defining **FeatureSpace** to be an abstract type which has 3 subtypes: FeatureVector, Cluster, and DataSet.
+These tools utilize the [bag-of-words model](http://en.wikipedia.org/wiki/Bag-of-words_model) and the [hashing trick](http://en.wikipedia.org/wiki/Feature_hashing) to vectorize texts into [feature vectors](http://en.wikipedia.org/wiki/Feature_vector). Feature vectors exist in an infinite dimensional vector space which is refered to as the **feature space**. In order to optimize calculations, dimensions where the feature vector has value 0 are removed from the feature vector's hashtable. We are defining **FeatureSpace** to be an abstract type which has 3 subtypes: FeatureVector, Cluster, and DataSet.
 
 
 #### Feature Vector
@@ -180,7 +180,7 @@ dist_infinite(fv1, fv2)
 
 The **Cluster** type is also a **Dictionary** container. However, it restricts mappings to **Any => FeatureVector** types and subtypes. This allows users to meaningfully label groups of *FeatureVectors* for Classification. The *Cluster* type also computes the centroid of the set.
 
-An empty *Cluster* can be constructed as so:
+An empty *Cluster* can be constructed with the following function:
 ```julia
 cl = Cluster()
 ```
